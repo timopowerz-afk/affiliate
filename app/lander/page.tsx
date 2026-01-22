@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 // Image URLs for different sections
@@ -72,7 +73,7 @@ function TopBar() {
     <header className="border-b-2 border-slate-900 bg-white shadow-lg">
       {/* Logo and Site Title */}
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-4">
+        <Link href="/" className="flex items-center gap-4">
           {/* American Flag Heart Logo */}
           <div className="relative h-12 w-12 flex-shrink-0">
             <svg
@@ -119,33 +120,28 @@ function TopBar() {
           <div className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
             U.S. Weight & Metabolism Journal
           </div>
-        </div>
+        </Link>
         <div className="hidden items-center gap-6 text-sm font-bold text-slate-700 sm:flex">
-          <span className="inline-flex items-center gap-2">
-            <span className="h-2 w-2 bg-emerald-600 animate-pulse" />
-            <span className="font-bold">FDA-Approved Program</span>
-          </span>
-          <span className="text-slate-300">|</span>
-          <button className="bg-slate-900 px-6 py-2.5 text-sm font-bold text-white shadow-lg hover:bg-slate-800 transition-all">
+          <Link href="/lander" className="bg-slate-900 px-6 py-2.5 text-sm font-bold text-white shadow-lg hover:bg-slate-800 transition-all">
             Get Started
-          </button>
+          </Link>
         </div>
       </div>
       {/* Navigation Bar */}
       <nav className="border-t-2 border-slate-200 bg-slate-50">
         <div className="mx-auto flex max-w-6xl items-center gap-8 px-4 py-3 sm:px-6 lg:px-8">
-          <a href="#" className="text-base font-bold text-slate-900 hover:text-blue-700 transition-colors">
+          <Link href="/health" className="text-base font-bold text-slate-900 hover:text-blue-700 transition-colors">
             Health
-          </a>
-          <a href="#" className="text-base font-bold text-slate-900 hover:text-blue-700 transition-colors">
+          </Link>
+          <Link href="/beauty" className="text-base font-bold text-slate-900 hover:text-blue-700 transition-colors">
             Beauty
-          </a>
-          <a href="#" className="text-base font-bold text-slate-900 hover:text-blue-700 transition-colors">
+          </Link>
+          <Link href="/news" className="text-base font-bold text-slate-900 hover:text-blue-700 transition-colors">
             News
-          </a>
-          <a href="#" className="text-base font-bold text-slate-900 hover:text-blue-700 transition-colors">
+          </Link>
+          <Link href="/about" className="text-base font-bold text-slate-900 hover:text-blue-700 transition-colors">
             About Us
-          </a>
+          </Link>
         </div>
       </nav>
     </header>
@@ -352,15 +348,15 @@ function WhoTookNumberOne() {
               priority
             />
           </div>
-          <a
-            href="#"
+          <Link
+            href="/lander"
             className="group mx-auto mt-8 flex max-w-md items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-600 px-8 py-5 text-xl font-black tracking-tight text-white shadow-xl shadow-emerald-500/30 ring-2 ring-white/20 ring-offset-2 ring-offset-slate-100 transition-all duration-200 hover:scale-[1.02] hover:shadow-2xl hover:shadow-emerald-500/40 hover:ring-emerald-400/30 active:scale-[0.98]"
           >
             <span>Check If This Applies To You</span>
             <svg className="h-6 w-6 shrink-0 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </a>
+          </Link>
           {/* Trust Badges */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs font-bold text-slate-500">
             <span className="flex items-center gap-2">
