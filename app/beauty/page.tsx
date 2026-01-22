@@ -85,9 +85,18 @@ function Footer() {
     <footer className="border-t-2 border-slate-200 bg-slate-50 py-8">
       <div className="mx-auto max-w-6xl px-4 text-xs leading-relaxed text-slate-600 sm:px-6 lg:px-8">
         <p className="mb-3 font-semibold text-slate-800">
-          This organization is committed to fighting obesity in America through evidence-based medical solutions.
+          This page is an advertorial in partnership with an independent telehealth provider. It is not a substitute for professional medical advice, diagnosis, or treatment. We do not practice medicine or provide medical services.
         </p>
-        <p className="font-semibold">© {new Date().getFullYear()} U.S. Weight & Metabolism Journal • All rights reserved.</p>
+        <p className="mb-3">
+          Only a licensed clinician can determine if GLP-1 medication is appropriate for you. Individual results vary and are not guaranteed.
+        </p>
+        <p className="mb-3">
+          Medications referenced are FDA-approved for specific indications. Prescribing decisions, dosing, and treatment plans are made solely by licensed clinicians.
+        </p>
+        <p className="mb-3">
+          Medication availability and pricing are subject to change. This information is current as of 2026 and may be updated as new clinical guidance becomes available.
+        </p>
+        <p className="font-semibold">© 2026 U.S. Weight & Metabolism Journal • All rights reserved.</p>
       </div>
     </footer>
   );
