@@ -323,21 +323,27 @@ function WhoTookNumberOne() {
   const top = rankings.find((r) => r.rank === 1);
   if (!top) return null;
 
+  const clickableUrl = "https://why.mostpeopledontknow.com/click";
+
   return (
     <section className="border-t-4 border-slate-200 bg-white py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="mb-12 text-center">
-          <div className="mb-4 inline-block border-2 border-slate-200 bg-slate-50 px-6 py-2 text-xs font-bold uppercase tracking-wider text-slate-700">
+          <Link href={clickableUrl} className="mb-4 inline-block border-2 border-slate-200 bg-slate-50 px-6 py-2 text-xs font-bold uppercase tracking-wider text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer">
             Medical Review • 2026
-          </div>
-          <h2 className="mb-6 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-            Who Really Took the #1 Spot for Weight Loss in 2026?
-          </h2>
-          <p className="mx-auto max-w-3xl text-lg font-bold leading-relaxed text-slate-800 sm:text-xl">
-          The Medically-Supervised GLP-1 Program Doctors Are Quietly Switching To
-          </p>
-          <div className="mx-auto mt-8 aspect-square w-full max-w-md overflow-hidden shadow-xl">
+          </Link>
+          <Link href={clickableUrl} className="block mb-6 cursor-pointer">
+            <h2 className="text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl hover:text-blue-700 transition-colors">
+              Who Really Took the #1 Spot for Weight Loss in 2026?
+            </h2>
+          </Link>
+          <Link href={clickableUrl} className="block mx-auto max-w-3xl cursor-pointer">
+            <p className="text-lg font-bold leading-relaxed text-slate-800 sm:text-xl hover:text-blue-700 transition-colors">
+            The Medically-Supervised GLP-1 Program Doctors Are Quietly Switching To
+            </p>
+          </Link>
+          <Link href={clickableUrl} className="block mx-auto mt-8 aspect-square w-full max-w-md overflow-hidden shadow-xl cursor-pointer hover:shadow-2xl transition-shadow">
             <Image
               src={getImageUrl("Medically-Supervised GLP-1 Program")}
               alt="Medically-Supervised GLP-1 Program"
@@ -347,9 +353,9 @@ function WhoTookNumberOne() {
               quality={95}
               priority
             />
-          </div>
+          </Link>
           <Link
-            href="/lander"
+            href={clickableUrl}
             className="group mx-auto mt-8 flex max-w-md items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-600 px-8 py-5 text-xl font-black tracking-tight text-white shadow-xl shadow-emerald-500/30 ring-2 ring-white/20 ring-offset-2 ring-offset-slate-100 transition-all duration-200 hover:scale-[1.02] hover:shadow-2xl hover:shadow-emerald-500/40 hover:ring-emerald-400/30 active:scale-[0.98]"
           >
             <span>Check If This Applies To You</span>
@@ -358,22 +364,24 @@ function WhoTookNumberOne() {
             </svg>
           </Link>
           {/* Trust Badges */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs font-bold text-slate-500">
-            <span className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 bg-emerald-600"></span>
-              FDA-Approved Medications
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 bg-emerald-600"></span>
-              Licensed Medical Providers
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 bg-emerald-600"></span>
-              Secure & Private
-            </span>
-          </div>
-          <div className="mt-8 relative max-w-md mx-auto">
-            <div className="relative bg-gradient-to-br from-amber-50 via-yellow-50 to-amber-100 border-2 border-blue-800/20 shadow-lg px-6 py-5 transform -rotate-0.5 hover:rotate-0 transition-transform duration-200">
+          <Link href={clickableUrl} className="block mt-8 cursor-pointer">
+            <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-bold text-slate-500 hover:text-slate-700 transition-colors">
+              <span className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 bg-emerald-600"></span>
+                FDA-Approved Medications
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 bg-emerald-600"></span>
+                Licensed Medical Providers
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 bg-emerald-600"></span>
+                Secure & Private
+              </span>
+            </div>
+          </Link>
+          <Link href={clickableUrl} className="block mt-8 relative max-w-md mx-auto cursor-pointer">
+            <div className="relative bg-gradient-to-br from-amber-50 via-yellow-50 to-amber-100 border-2 border-blue-800/20 shadow-lg px-6 py-5 transform -rotate-0.5 hover:rotate-0 transition-transform duration-200 hover:shadow-xl">
               <div className="absolute top-2 left-2 w-8 h-8 border-l-2 border-t-2 border-blue-600/30"></div>
               <div className="absolute bottom-2 right-2 w-8 h-8 border-r-2 border-b-2 border-blue-600/30"></div>
               <p className="font-caveat text-2xl sm:text-3xl font-bold text-blue-900 leading-relaxed relative z-10 text-left">
@@ -402,7 +410,7 @@ function WhoTookNumberOne() {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>
